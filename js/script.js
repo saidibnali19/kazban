@@ -10,3 +10,19 @@ menuToggler.addEventListener("click", () => {
         menuToggler.setAttribute("aria-expanded", false);
     }
 });
+
+
+// For custom play button
+const playPauseButton = document.querySelector("[data-play-pause-button]")
+const video = document.querySelector("[data-video]")
+
+playPauseButton.addEventListener("click", () => {
+    if (video.paused == true) {
+        // Play the video
+        video.play();
+      } else {
+        // Pause the video
+        video.pause();
+      }
+
+})
